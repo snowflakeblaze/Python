@@ -25,6 +25,6 @@ if(calories.is_integer()):
     print("\nHave a Great Day")
 else:
     print("\nYour toal calories consumed for the day is: " + str(calories))
-    print("\nHave a Great Day\n\n\n")
+    print("\nHave a Great Day")
 
 
