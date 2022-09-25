@@ -6,6 +6,7 @@
 
 print ("\n\nWelcome\n\n")
 
+##Checks the corresponding user input with the list to get the month 
 def determine_month(integer_input):    
     if integer_input == 2:
         return "\n\nThe number you chose corresponds to\n \t>>> Febuary <<<"
@@ -27,23 +28,36 @@ def determine_month(integer_input):
         return "\n\nThe number you chose corresponds to\n  \t>>> October <<<"
     elif integer_input == 11:
         return "\n\nThe number you chose corresponds to\n  \t>>> November <<<"
+         
 
+##Checks the corresponding user input with the list to get the amount of days
 def determine_days(user_number):
-    if (user_number == 3 or 5 or 7 or 8 or 10):
+    if (user_number == 3 or 
+        user_number == 5 or 
+        user_number == 7 or 
+        user_number == 8 or 
+        user_number == 10):
         return "\nThere are \n\t>>> 31 Days <<<\n in this month\n\n"
-    elif (user_number == 4 or 6 or 9 or 11):
-         return "\nThere are \n\t>>> 30 Days <<<\n in this month\n\n"
+        
+    elif (user_number == 4 or 
+        user_number == 6 or 
+        user_number == 9 or 
+        user_number == 11):
+        return "\nThere are \n\t>>> 30 Days <<<\n in this month\n\n"
+        
     elif (user_number == 2):
-         return "\nThere are \n\t>>> 28 Days <<<\n in this month\n\n"
-    
-user_input = int(input("please enter a number between 1 and 12\n"))
+        return "\nThere are \n\t>>> 28 Days <<<\n in this month\n\n"            
 
-while user_input == '':
+##Ensures the user selects a number in order to provide a output
+while True:
     user_input = int(input("please enter a number between 1 and 12\n"))
-    
-
-print (determine_month(user_input))
-print (determine_days(user_input))
-
-
-
+    if user_input != 1:
+        if user_input != 12:
+            print (determine_month(user_input))
+            print (determine_days(user_input))
+            print ("\nHave a Great Day!\n")
+            break
+        else:
+            print("\nYou have made an invalid selection, you must choose a number between 1 and 12.\n") 
+    else:
+        print("\nYou have made an invalid selection, you must choose a number between 1 and 12.\n") 
