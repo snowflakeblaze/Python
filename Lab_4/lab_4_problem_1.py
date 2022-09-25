@@ -5,6 +5,7 @@
 print ("\nWelcome\n\n")
 another_round = ""
 
+##function to test whether number is even or odd
 def even_odd_tester(number):
     if(number % 2 == 0):
         test_result = "\nThe number you have entered is an \n>>>Even number<<<\n"
@@ -12,6 +13,7 @@ def even_odd_tester(number):
         test_result = "\nThe number you have entered is an \n>>>Odd number<<<\n"
     return test_result
 
+##while loop used get user inout and repeat until cancelled 
 while another_round != "n":
     user_input = int(input("PLease enter a number without any decimals\n"))
     test_result = even_odd_tester(user_input)
