@@ -9,6 +9,7 @@ print ("This program is going to calculate the amount of bugs you collected duri
 
 bugs_collected = 0
 
+##For loop to repeat the loop 7 times & calculate the total 
 for x in range(7):
     daily_input = int(input("Please enter how many bugs you collected on day " + str(x + 1) + ": \n"))
     bugs_collected = bugs_collected + daily_input
