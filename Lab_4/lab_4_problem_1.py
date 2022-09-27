@@ -21,6 +21,3 @@ while another_round != "n":
     another_round = input("Would you like to try again?\n")
     if(another_round == "n"):
         print ("\n\nHave a Great Day\n\n")
-
-
-
