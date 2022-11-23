@@ -35,21 +35,21 @@ print ("{}\n{}\nFingerprint scanner: {}\nFace ID: {}\nCamera megapixels: {}\nAva
 
 
 class Supercar:
-    wheels = 2
+    wheels = 4
     seats = 2
     def __init__(self, brand, mpg, speed):
         self.brand = brand
         self.mpg = mpg
         self.speed = speed
     
-    def speed_up(self):
-        self. speed += 20
+    def accelerate(self):
+        self.speed += 20
     
-    def speed_down (self):
-        self.down -= 20
+    def decelerate(self):
+        self.speed -= 50
 
 james = Supercar ( "Porsche 911 GT3 RS", 100, 140)
 print ("The Super car is a {}, it has {} mpg and is going {} mpg.". format (james.brand, james.mpg, james.speed)) 
-print (james.wheels) 
-james.speed_up() 
-print (james.speed)
+print ("The Car has: {} wheels".format(james.wheels))
+james.decelerate() 
+print ("The Super car is a {}, it has {} mpg and is going {} mpg.". format (james.brand, james.mpg, james.speed)) 
